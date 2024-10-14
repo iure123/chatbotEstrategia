@@ -101,12 +101,12 @@ def pegar_hipotese_prompt_1(prompt_1_text):
         if start_collecting:
             hipotese += line + "\n"
     return hipotese if hipotese else "Hipótese não encontrada."
-
+#retorno financeiro 
 def gerar_prompt_2(hipotese):
     model = inicializar_modelo(textsi_2)
     response = model.generate_content([hipotese], generation_config=generation_config, safety_settings=safety_settings, stream=True)
     return "".join([response.text if hasattr(response, 'text') else str(response) for response in response])
-
+#arquitetura 
 def gerar_prompt_3(hipotese):
     model = inicializar_modelo(textsi_3)
     response = model.generate_content([hipotese], generation_config=generation_config, safety_settings=safety_settings, stream=True)

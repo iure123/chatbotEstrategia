@@ -60,11 +60,7 @@ def ask_next_step(report2, report3):
 def form_page():
     st.write("# Formulário")
     
-    area = st.selectbox(
-        "Área de atuação", 
-        ["Estratégia digital", "Operações florestais", "TI", "Vendas", "Outros"],
-        help="Selecione a área em que você atua."
-    )
+    area = st.text_input("Área de atuação", help="Descreva a área em que você atua, por exemplo, TI, Vendas, etc.")
     dores = st.text_input("Principais dores ou problemas", help="Informe os principais problemas que você enfrenta no seu trabalho.")
     beneficios = st.text_input("Benefícios esperados", help="Quais os benefícios que você espera alcançar com a solução.")
     objetivo = st.text_input("Objetivo principal da solução", help="Defina qual é o objetivo principal da solução que você deseja.")
